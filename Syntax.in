@@ -1,0 +1,24 @@
+<decl_stmt> ::= int <identifier> ;
+              | char <identifier> ;
+<comp_op> ::=  < | > | <= | >= | ==  
+<arith_op> ::=  + | - | * | / 
+<assgn_op> ::= =
+<io_op> ::= cin>> | cout<<
+<cond_stmt> ::= <identifier> <comp_op> <identifier>
+              | <identifier> <comp_op> <integer> 
+              | <integer> <comp_op> <integer>
+              | <integer> <comp_op> <identifier>
+<assign_stmt> ::= <identifier> = <integer> ;
+              | <identifier> = <char> ;
+
+<io_stmt> ::= <io_op> <identifier> ;
+            | <io_op> <integer> ;
+            | <io_op> <char> ;
+<simpl_stmt> ::= <assign_stmt> | <io_stmt>
+<cmpd_stmt> ::= <simpl_stmt> | <simpl_stmt> <cmpd_stmt>
+<if_stmt> ::= if ( <cond_stmt> ) { <cmpd_stmt> }
+<while_stmt> ::= while ( <cond_stmt> ) { <cmpd_stmt> } 
+<struct_stmt> ::= <cmpd_stmt> | <if_stmt> | <while_stmt>
+<stmt> ::= <simpl_stmt> | <struct_stmt>
+<program> ::= <stmt> | <stmt> <program>
+              

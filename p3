@@ -1,0 +1,12 @@
+// Sum of n numbers
+int n;
+int sum = 0;
+cin>>n;
+int x;
+int i;
+for (i = 1; i <= n; i++) {
+  cin>x;
+  sum = sum + x;
+}
+cout<<sum;
+

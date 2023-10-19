@@ -1,0 +1,32 @@
+// Data types: int, char
+// User-defined type: array
+// Assignment: =
+// Input/output: cin>>, cout<<
+// Conditional: if
+// Iteration: for, while
+
+// for token.in: Operators, separators, keywords, 1 on each line
+
+// !! Alphabet is <alphabet>
+
+<letter_starting> ::= a | b | ... | z | A | B | ... | Z
+<letter> ::= <letter_starting> | _
+
+<digit_starting> ::= 1 | 2 | ... | 9
+<digit> ::= 0 | <digit_starting>
+
+<alphabet_starting> ::= <letter_starting> | <digit_starting>
+<alphabet> ::= <letter> | <digit>
+
+<operator> ::= = | + | - | * | / | < | > | <= | >= | ==  
+<separator> ::= ; | , | ( | ) | { | } | [ | ]
+
+<keyword> ::= int | char | array | if | for | while | cin>> | cout<<
+<identifier> ::= <letter_starting> | <letter_starting> <digit>
+
+<seq_digits> ::= <digit> | <digit> <seq_digits>
+<integer_partial> ::= <digit_starting> | <digit_starting> <seq_digits>
+<integer_full> ::= + <integer_partial> | - <integer_partial> | <integer_partial> | 0
+
+<char> ::= '<alphabet>'
+
