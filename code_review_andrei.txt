@@ -1,0 +1,33 @@
+repo: https://github.com/andrenyky/FLCD/
+
+Lexic.txt:
+  - Adding comments or descriptions for each rule would greatly
+  improve the readability of the grammar. This is especially
+  important if this grammar definition is intended for use by
+  others who may not be familiar with its purpose.
+
+  - Specifiying all the letters wasn't necessary, could have used ...
+  instead.
+
+  - Ensure that the use of whitespace in your definitions accurately
+  reflects how whitespace should be treated in the language. 
+  Consider specifying how whitespace should be handled in the grammar.
+
+
+Syntax.in.txt:
+  - The <for-loop> and <while-loop> rules are defined with colons (:==)
+  instead of double colons (::=). Make sure to use the correct
+  notation consistently.
+  
+  - Some production rules are mentioned but not fully defined.
+  For example, <assignment operator> is referenced but not defined
+  in the provided grammar.
+
+
+Token.in.txt:
+  - The definition of <string literal> may need to consider escape
+  sequences within strings, as this is common in many
+  programming languages.
+
+  - It's helpful to distinguish between terminal symbols (e.g., "true," "false," "=") 
+  and non-terminal symbols (e.g., <integer literal>, <assignment operator>) for clarity.
