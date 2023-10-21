@@ -10,6 +10,10 @@
               | <integer> <comp_op> <identifier>
 <assign_stmt> ::= <identifier> = <integer> ;
               | <identifier> = <char> ;
+              | <identifier> = <arith_exp> ;
+
+<arith_operand> ::= <identifier> | <integer_full>
+<arith_exp> ::= <arith_operand> <arith_op> <arith_operand>
 
 <io_stmt> ::= <io_op> <identifier> ;
             | <io_op> <integer> ;
