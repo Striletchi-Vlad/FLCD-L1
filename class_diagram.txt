@@ -1,0 +1,18 @@
+
++----------------+           0 +------------------+
+|     Lexer      |         --->|   SymbolTable    |
++----------------+         |   +------------------+
+| - pos: int     |         |   | - size: int      |
+| - filename: str|  1      |   | - table: list    |
+| - st: SymbolTable|-------    +------------------+
+| - lines: list  |             | + hash_function()|
+| - tokens: list |             | + insert(value)  |
+| - separators: list|          | + lookup(value)  |
+| - identifier_regex: str|     | + delete(value)  |
+| - constant_regex: str|       | + display()      |
+| - PIF: list    |             | + __str__()      |
+| + read_file()  |             |                  |
+| + split_text() |             |                  |
+| + lex()        |             |                  |
+| + main()       |             |                  |
++----------------+             +------------------+

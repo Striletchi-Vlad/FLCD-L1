@@ -1,0 +1,49 @@
+class SymbolTable:
+    def __init__(self, size=100):
+        """
+        Initialize a symbol table with an optional specified size.
+
+        :param size: The size of the hash table. Default is 100.
+        """
+
+    def hash_function(self, key):
+        """
+        A simple hash function that returns the index for a given key.
+
+        :param key: The key to be hashed.
+        :return: The hash index for the key.
+        """
+
+    def insert(self, value):
+        """
+        Insert a value into the symbol table using its hash as the key.
+
+        :param value: The value to be inserted.
+        """
+
+    def lookup(self, value):
+        """
+        Look up a value in the symbol table and return the key if found
+
+        :param value: The value to be looked up.
+        :return: The key for the value if found, None otherwise.
+        """
+
+    def delete(self, value):
+        """
+        Delete a value from the symbol table.
+
+        :param value: The value to be deleted.
+        """
+
+    def display(self):
+        """
+        Display the contents of the symbol table.
+        """
+
+    def __str__(self):
+        """
+        Return a string representation of the symbol table.
+
+        :return: A string representation of the symbol table.
+        """

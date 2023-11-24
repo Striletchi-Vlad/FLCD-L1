@@ -1,21 +1,24 @@
 // Maximum of 3 numbers
-int a; 
-int b;
-int c;
-cin>>a;
-cin>>b;
-cin>>c;
-if (a > b) {
-  if (a > c) {
-    cout<<a;
-  } else {
-    cout<<c;
+int a ; 
+int b ;
+int c ;
+cin>> a ;
+cin>> b ;
+cin>> c ;
+if ( a > b ) {
+  if ( a > c ) {
+    cout<< a ;
   }
-} else {
+  if (a <= c) {
+    cout<< c ;
+  }
+}
+if ( a <= b ) {
   if (b > c) {
-    cout<<b;
-  } else {
-    cout<<c;
+    cout<< b ;
+  }
+  if (b <= c) {
+    cout<< c ;
   }
 }
 

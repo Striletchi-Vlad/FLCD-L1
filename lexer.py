@@ -2,7 +2,7 @@ from symboltable import SymbolTable
 import re
 
 
-class Lexer():
+class Lexer:
     def __init__(self, filename):
         self.pos = 0
         self.filename = filename
@@ -11,21 +11,21 @@ class Lexer():
         with open("Token.in", "r") as f:
             self.tokens = f.read().splitlines()
         self.separators = [
-            ' ',
-            ';',
-            '{',
-            '}',
-            '(',
-            ')',
+            " ",
+            ";",
+            "{",
+            "}",
+            "(",
+            ")",
         ]
-        self.identifier_regex = r'^[a-zA-Z][a-zA-Z0-9]?$'
-        self.constant_regex = r'^[+-]?[0-9]+$'
+        self.identifier_regex = r"^[a-zA-Z][a-zA-Z0-9]?$"
+        self.constant_regex = r"^[+-]?[0-9]+$"
         self.PIF = []
 
     def read_file(self):
-        with open(self.filename, 'r') as f:
+        with open(self.filename, "r") as f:
             for line in f:
-                if line[:2] == '//':
+                if line[:2] == "//":
                     continue
                 # Remove \n
                 line = line[:-1]
@@ -41,7 +41,7 @@ class Lexer():
             aux = self.lines[i]
             print(aux)
             for separator in self.separators:
-                aux = aux.replace(separator, ' ' + separator + ' ')
+                aux = aux.replace(separator, " " + separator + " ")
             aux = aux.split()
             self.lines[i] = aux
 
@@ -52,18 +52,18 @@ class Lexer():
                     self.PIF.append((item, -1))
                 elif re.match(self.identifier_regex, item):
                     idx = self.st.insert(item)
-                    self.PIF.append(('id', idx))
+                    self.PIF.append(("id", idx))
                 elif re.match(self.constant_regex, item):
                     idx = self.st.insert(item)
-                    self.PIF.append(('const', idx))
+                    self.PIF.append(("const", idx))
                 else:
-                    print('Error: ' + item + ', line ' + str(i))
+                    print("Error: " + item + ", line " + str(i))
                     return
-        print('Lex succesful!')
-        with open('PIF.out', 'w') as f:
+        print("Lex succesful!")
+        with open("PIF.out", "w") as f:
             for item in self.PIF:
-                f.write(str(item) + '\n')
-        with open('ST.out', 'w') as f:
+                f.write(str(item) + "\n")
+        with open("ST.out", "w") as f:
             f.write(str(self.st))
 
     def main(self):
@@ -72,6 +72,6 @@ class Lexer():
         self.lex()
 
 
-if __name__ == '__main__':
-    lexer = Lexer('p1err')
+if __name__ == "__main__":
+    lexer = Lexer("p1")
     lexer.main()
